@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="362c0617-f816-4962-89c1-343a96f47347" name="Default Changelist" comment="" />
+    <list default="true" id="362c0617-f816-4962-89c1-343a96f47347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Detty/com/lofthouse/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Detty/com/lofthouse/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lofthouse/Buffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lofthouse/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lofthouse/DebtProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lofthouse/DebtProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lofthouse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lofthouse/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lofthouse/Phone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lofthouse/Producer.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +26,14 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Detty" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OtIgu70m5GzyTIJ451GKYXWxk4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -67,7 +81,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

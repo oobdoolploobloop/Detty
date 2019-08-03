@@ -3,8 +3,8 @@ package com.lofthouse;
 import java.util.*;
 
 public class DebtProfile {
+    boolean debug = true;
     private LinkedList<DebtEntry> debtEntryList;
-
     private Hashtable<Integer, Integer> listOfContacts; // List of <Contact ID, # of instances of debt in list>
 
     public DebtProfile() {
@@ -19,6 +19,8 @@ public class DebtProfile {
         int owe = de.idOwe;
         int owed = de.idOwed;
 
+        if(debug)System.out.println("Got new DebtEntry from " + owe + " to " + owed);
+
         // Do we already know the owed?
         knowOwed = personInListOfContacts(owed);
 
@@ -28,11 +30,14 @@ public class DebtProfile {
         // If we knew both of them, search to see if we have another debt between the two or not
         if(knowOwe && knowOwed){ // We know both of them, test if they have mutual debt
             updateDebtProfileBothKnown(de);
+            if(debug)System.out.println("We know both of these users");
         }else{ // We dont know both of them, add a new node between them of debt
+            if(debug)System.out.println("We don't know both of these users");
             debtEntryList.add(de);
         }
 
         uncycleDebtProfile();
+        printDebtProfile();
 
     }
 
@@ -55,7 +60,7 @@ public class DebtProfile {
                 }else if(d.amt < amt){ // Paying back more than they need to, reverse debt
                     int namt = amt - d.amt;
                     debtEntryList.remove(d); // Remove current entry
-                    debtEntryList.add((new DebtEntry(owed, owe, namt))); // Add one of reverse order
+                    debtEntryList.add((new DebtEntry(owe, owed, namt))); // Add one of reverse order
 
                 }else{ // Debt equal, remove the node
                     debtEntryList.remove(d);
@@ -77,10 +82,10 @@ public class DebtProfile {
     private boolean personInListOfContacts(int p){
         if(listOfContacts.containsKey(p)){
             listOfContacts.replace(p, listOfContacts.get(p) + 1);
-            return false;
+            return true;
         }else{
             listOfContacts.put(p,1);
-            return true;
+            return false;
         }
     }
 
@@ -99,5 +104,10 @@ public class DebtProfile {
 
     }
 
+    private void printDebtProfile(){
+        for(DebtEntry d : debtEntryList){
+            System.out.println(d.idOwe + " owes " + d.idOwed + " $" + d.amt);
+        }
+    }
 }
 
